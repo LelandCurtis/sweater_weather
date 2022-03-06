@@ -2,15 +2,15 @@ class MapQuestService
   class << self
 
     def conn
-      conn = Faraday.new('http://www.mapquestapi.com/geocoding/v1/')
+      conn = Faraday.new(url:'http://www.mapquestapi.com')
     end
 
     def get_geocode(address)
-      get_url("address?location=#{formatted_address(address)}")
+      get_url("/geocoding/v1/address?location=#{formatted_address(address)}")
     end
 
     def get_url(url)
-      conn.get(url + "&key=#{ENV['map_quest_api_key']}")
+      response = conn.get(url + "&key=#{ENV['map_quest_api_key']}")
     end
 
     def formatted_address(address)
@@ -19,7 +19,7 @@ class MapQuestService
       parts = address.split(',')
       parts = parts.map{ |part| part.lstrip }
       parts[0] = parts[0].gsub(' ', '+')
-      formatted_address = parts.join()
+      formatted_address = parts.join(',')
     end
 
   end
