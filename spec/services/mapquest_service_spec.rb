@@ -24,6 +24,8 @@ RSpec.describe 'MapQuest Geocode service' do
         expect(location).to have_key(:latLng)
         expect(location[:latLng]).to be_a(Hash)
         expect(location[:latLng].keys).to eq([:lat, :lng])
+        expect(location[:latLng][:lat]).to be_a(Float)
+        expect(location[:latLng][:lng]).to be_a(Float)
       end
     end
   end
