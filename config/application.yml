@@ -10,4 +10,5 @@
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
-open_weeather_api_key: 1213d4c05a8b8ce19a13b4a05c7a484b
+open_weather_api_key: 1213d4c05a8b8ce19a13b4a05c7a484b
+map_quest_api_key: 99mNgu4YOQ0SXX2osTFpPwELw79iGb9y
