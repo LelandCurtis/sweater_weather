@@ -5,7 +5,7 @@ RSpec.describe 'MapQuest Geocode service' do
     describe 'GET /geocode' do
       let!(:address) { "1850 Bassett Street, Denver CO" }
       let!(:response) { MapQuestService.get_geocode(address) }
-      let!(:json) { JSON.parse(response.body, symbolize_names: true }
+      let!(:json) { JSON.parse(response.body, symbolize_names: true) }
 
       it "returns a successful https status code" do
         expect(response).to be_sucessful
