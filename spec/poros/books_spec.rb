@@ -1,10 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe 'books poro' do
+  let!(:isbn) { ["9780883183663","0883183668"] }
+  let!(:title) { "Photovoltaic safety, Denver, CO, 1988" }
+  let!(:publisher) { ["Crescent Books",
+                      "Random House Value Publishing",
+                      "Distributed by Crown Publishers",
+                      "Crescent"
+                      ] }
+  let!(:data) { {isbn: isbn, title: title, publisher: publisher} }
+  let!(:book) { Book.new(data) }
+
   let!(:num_books) { 5 }
-  let!(:books_array) { build_list(:book, num_books) }
+  let!(:books_array) { [].fill(book, 0, num_books) }
   let!(:total_books_found) { 1280 }
-  let!(:books) { Books.new(books_array, total_books_found) }
+  let!(:books) { Books.new(total_books_found, books_array) }
 
   it "exists" do
     expect(books).to be_a(Books)

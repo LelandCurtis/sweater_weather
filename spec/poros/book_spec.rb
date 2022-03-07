@@ -8,21 +8,10 @@ RSpec.describe 'book poro' do
                       "Distributed by Crown Publishers",
                       "Crescent"
                       ] }
-  let!(:data) { isbn: isbn, title: title, publisher: publisher }
+  let!(:data) { {isbn: isbn, title: title, publisher: publisher} }
   let!(:book) { Book.new(data) }
-  let!(:factory_book) { build(:book) }
 
   it "exists" do
-    expect(book).to be_a(Book)
-    expect(book.title).to be_a(String)
-    expect(book.title).to eq(title)
-    expect(book.isbn).to be_a(Array)
-    expect(book.isbn).to eq(isbn)
-    expect(book.publisher).to be_a(Array)
-    expect(book.publisher).to eq(publisher)
-  end
-
-  it "factory works" do
     expect(book).to be_a(Book)
     expect(book.title).to be_a(String)
     expect(book.title).to eq(title)

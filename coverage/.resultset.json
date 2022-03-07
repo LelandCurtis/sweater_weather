@@ -204,6 +204,28 @@
           null
         ]
       },
+      "/Users/lelandcurtis/turing/3mod/sweater_weather/spec/factories/book.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/lelandcurtis/turing/3mod/sweater_weather/spec/factories/current_weather.rb": {
         "lines": [
           1,
@@ -237,28 +259,32 @@
           null
         ]
       },
-      "/Users/lelandcurtis/turing/3mod/sweater_weather/app/services/book_service.rb": {
+      "/Users/lelandcurtis/turing/3mod/sweater_weather/app/poros/book.rb": {
         "lines": [
           1,
           1,
           null,
           1,
           1,
-          null,
-          null,
           1,
           1,
           null,
-          null,
+          null
+        ]
+      },
+      "/Users/lelandcurtis/turing/3mod/sweater_weather/app/poros/books.rb": {
+        "lines": [
           1,
           1,
           null,
-          null,
+          1,
+          1,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1646670827
+    "timestamp": 1646673121
   }
 }
