@@ -20,11 +20,11 @@ RSpec.describe 'book search GET /api/v1/book-search?location=xx&quantity=x' do
       expect(data).to have_key(:type)
       expect(data[:type]).to eq("books")
       expect(data).to have_key(:attributes)
-      expect(data[:type]).to be_a(Hash)
+      expect(data[:attributes]).to be_a(Hash)
 
       attributes = data[:attributes]
       expect(attributes).to have_key(:destination)
-      expect(attributes[:distination]).to eq(location)
+      expect(attributes[:destination]).to eq(location)
       expect(attributes).to have_key(:forecast)
       expect(attributes[:forecast]).to be_a(Hash)
       expect(attributes[:forecast]).to have_key(:summary)

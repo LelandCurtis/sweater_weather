@@ -18,8 +18,8 @@ RSpec.describe 'Open Weather Map Facade' do
         expect(current.datetime).to be_a(String)
         expect(current.sunrise).to be_a(String)
         expect(current.sunset).to be_a(String)
-        expect(current.temperature).to be_a(Float)
-        expect(current.feels_like).to be_a(Float)
+        expect(current.temperature).to be_a(String)
+        expect(current.feels_like).to be_a(String)
         expect(current.humidity).to be_a_kind_of(Numeric)
         expect(current.uvi).to be_a_kind_of(Numeric)
         expect(current.visibility).to be_a_kind_of(Numeric)
@@ -37,8 +37,8 @@ RSpec.describe 'Open Weather Map Facade' do
         expect(daily.date).to be_a(String)
         expect(daily.sunrise).to be_a(String)
         expect(daily.sunset).to be_a(String)
-        expect(daily.max_temp).to be_a_kind_of(Numeric)
-        expect(daily.min_temp).to be_a_kind_of(Numeric)
+        expect(daily.max_temp).to be_a_kind_of(String)
+        expect(daily.min_temp).to be_a_kind_of(String)
         expect(daily.conditions).to be_a(String)
         expect(daily.icon).to be_a(String)
       end
@@ -51,7 +51,7 @@ RSpec.describe 'Open Weather Map Facade' do
         hourly = hourly_array.sample(1)[0]
         expect(hourly).to be_a(HourlyWeather)
         expect(hourly.time).to be_a(String)
-        expect(hourly.temperature).to be_a_kind_of(Numeric)
+        expect(hourly.temperature).to be_a_kind_of(String)
         expect(hourly.conditions).to be_a(String)
         expect(hourly.icon).to be_a(String)
       end

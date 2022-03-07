@@ -16,9 +16,11 @@ RSpec.describe 'image endpoint GET /api/v1/backgrounds?location=denver,co' do
         data = json[:data]
         expect(data.keys).to eq([:id, :type, :attributes])
         expect(data[:id]).to eq(nil)
-        expect(data[:type]).to eq("forecast")
+        expect(data[:type]).to eq("image")
         expect(data[:attributes]).to be_a(Hash)
-        expect(data[:attributes].keys).to eq([:height, :width, :location, :url, :author])
+        expect(data[:attributes]).to have_key(:image)
+        expect(data[:attributes][:image]).to be_a(Hash)
+        expect(data[:attributes][:image].keys).to eq([:height, :width, :location, :image_url, :author])
       end
     end
   end

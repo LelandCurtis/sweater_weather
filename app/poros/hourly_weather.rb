@@ -4,7 +4,7 @@ class HourlyWeather < Weather
 
   def initialize(data)
     @time = format_time(data[:dt])
-    @temperature = data[:temperature]
+    @temperature = "#{data[:temperature]} F"
     @conditions = data[:conditions]
     @icon = data[:icon]
   end
