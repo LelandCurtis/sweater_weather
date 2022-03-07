@@ -25,8 +25,8 @@ RSpec.describe 'book service' do
         #ibsn, title, publisher
         expect(book).to have_key(:title)
         expect(book[:title]).to be_a(String)
-        expect(book).to have_key(:ibsn)
-        expect(book[:ibsn]).to be_a(Array)
+        expect(book).to have_key(:isbn)
+        expect(book[:isbn]).to be_a(Array)
         expect(book).to have_key(:publisher)
         expect(book[:publisher]).to be_a(Array)
       end
