@@ -33,6 +33,9 @@ RSpec.describe 'Open Weather Map Service' do
                                 :weather]
         # check that all requried keys are in hash
         expect(current.keys & current_weather_keys ==  current_weather_keys).to eq(true)
+        expect(current[:dt]).to be_a(Integer)
+        expect(current[:sunrise]).to be_a(Integer)
+        expect(current[:sunset]).to be_a(Integer)
         expect(current[:weather]).to be_a(Array)
         expect(current[:weather][0]).to be_a(Hash)
         expect(current[:weather][0]).to have_key(:description)
@@ -50,6 +53,9 @@ RSpec.describe 'Open Weather Map Service' do
         # check that all requried keys are in hash
         expect(daily.keys & daily_weather_keys ==  daily_weather_keys).to eq(true)
 
+        expect(daily[:dt]).to be_a(Integer)
+        expect(daily[:sunrise]).to be_a(Integer)
+        expect(daily[:sunset]).to be_a(Integer)
         expect(daily[:temp]).to be_a(Hash)
         expect(daily[:temp]).to have_key(:max)
         expect(daily[:temp]).to have_key(:min)
@@ -68,6 +74,7 @@ RSpec.describe 'Open Weather Map Service' do
                               :weather]
         # check that all requried keys are in hash
         expect(hourly.keys & hourly_weather_keys ==  hourly_weather_keys).to eq(true)
+        expect(hourly[:dt]).to be_a(Integer)
         expect(hourly[:weather]).to be_a(Array)
         expect(hourly[:weather][0]).to be_a(Hash)
         expect(hourly[:weather][0]).to have_key(:description)

@@ -204,6 +204,27 @@
           null
         ]
       },
+      "/Users/lelandcurtis/turing/3mod/sweater_weather/spec/factories/current_weather.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/lelandcurtis/turing/3mod/sweater_weather/config/routes.rb": {
         "lines": [
           1,
@@ -211,28 +232,57 @@
           null
         ]
       },
-      "/Users/lelandcurtis/turing/3mod/sweater_weather/app/services/open_weather_map_service.rb": {
+      "/Users/lelandcurtis/turing/3mod/sweater_weather/app/poros/current_weather.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/lelandcurtis/turing/3mod/sweater_weather/app/poros/weather.rb": {
         "lines": [
           1,
           1,
           null,
           1,
-          2,
+          6,
+          6,
           null,
           null,
           1,
-          2,
+          0,
+          0,
           null,
           null,
           1,
-          2,
-          null,
-          null,
+          0,
+          0,
           null,
           null
         ]
       }
     },
-    "timestamp": 1646608726
+    "timestamp": 1646615146
   }
 }

@@ -10,7 +10,7 @@ class OpenWeatherMapService
     end
 
     def get_url(url)
-      conn.get(url + "&appid=#{ENV['open_weather_api_key']}")
+      conn.get(url + "&units=imperial&appid=#{ENV['open_weather_api_key']}")
     end
 
   end
