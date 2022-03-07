@@ -9,7 +9,7 @@ class CurrentWeather < Weather
               :visibility
 
   def initialize(data)
-    @datetime = format_datetime(data[:datetime])
+    @datetime = format_datetime(data[:dt])
     @sunrise = format_datetime(data[:sunrise])
     @sunset = format_datetime(data[:sunset])
     @temperature = data[:temperature]

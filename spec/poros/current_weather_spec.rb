@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'CurrentWeather object' do
-  let!(:attributes) { {datetime: DateTime.new(2020, 9, 30, 13, 27, 03, Rational(-6, 24)),
-                      sunrise: DateTime.new(2020, 9, 30, 6, 27, 03, Rational(-6, 24)),
-                      sunset: DateTime.new(2020, 9, 30, 18, 27, 03, Rational(-6, 24)),
+  let!(:attributes) { {dt: 1646612833,
+                      sunrise: 1646573135,
+                      sunset:  1646614624,
                       temperature: 85.6,
                       feels_like: 95.6,
                       humidity: 84,
@@ -13,16 +13,15 @@ RSpec.describe 'CurrentWeather object' do
                       icon: "04d"}
                     }
   let!(:current_weather) { CurrentWeather.new(attributes) }
-  #let!(:current_weather_factory) { build(:current_weather) }
 
   it "exists" do
     expect(current_weather).to be_a(CurrentWeather)
   end
 
   it "has correct attributes" do
-    expect(current_weather.datetime).to eq('2020-09-30 13:27:03 -06:00')
-    expect(current_weather.sunrise).to eq('2020-09-30 06:27:03 -06:00')
-    expect(current_weather.sunset).to eq('2020-09-30 18:27:03 -06:00')
+    expect(current_weather.datetime).to eq('2022-03-06 17:27:13 -07:00')
+    expect(current_weather.sunrise).to eq('2022-03-06 06:25:35 -07:00')
+    expect(current_weather.sunset).to eq('2022-03-06 17:57:04 -07:00')
     expect(current_weather.temperature).to eq(85.6)
     expect(current_weather.feels_like).to eq(95.6)
     expect(current_weather.humidity).to eq(84)
