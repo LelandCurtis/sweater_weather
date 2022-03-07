@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/geocoding/v1/address?key=<encrypted_key>&location=1850%20Bassett%20Street%20Apt%20813,Denver,CO,80202
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Mon, 07 Mar 2022 02:22:01 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '1116'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Mon, 07 Mar 2022 02:22:01 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Set-Cookie:
+      - JSESSIONID=555F10B46C43C90592C629E8CD803C23; Path=/; HttpOnly
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2022 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"1850
+        Bassett Street Apt 813,Denver,CO,80202"},"locations":[{"street":"1850 Bassett
+        St, APT 813","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"Denver","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"80202-1020","geocodeQualityCode":"P1AAA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"R","linkId":"r50922376|p279280705|n252657462","unknownInput":"","type":"s","latLng":{"lat":39.757605,"lng":-105.002287},"displayLatLng":{"lat":39.757408,"lng":-105.002026},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<encrypted_key>&type=map&size=225,160&locations=39.757605,-105.002287|marker-sm-50318A-1&scalebar=true&zoom=15&rand=-997651390"}]}]}'
+  recorded_at: Mon, 07 Mar 2022 02:22:00 GMT
+recorded_with: VCR 6.0.0
