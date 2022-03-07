@@ -14,7 +14,7 @@ RSpec.describe 'HourlyWeather object' do
 
   it "has correct attributes" do
     expect(hourly_weather.time).to eq('17:27:13')
-    expect(hourly_weather.temperature).to eq(85.6)
+    expect(hourly_weather.temperature).to eq("85.6 F")
     expect(hourly_weather.conditions).to eq("overcast clouds")
     expect(hourly_weather.icon).to eq("04d")
   end

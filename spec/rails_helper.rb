@@ -71,14 +71,6 @@ RSpec.configure do |config|
 
 end
 
-VCR.configure do |config|
-  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
-  config.hook_into :webmock
-  config.filter_sensitive_data('<encrypted_key>') { ENV['map_quest_api_key'] }
-  config.filter_sensitive_data('<encrypted_key>') { ENV['open_weather_api_key'] }
-  config.configure_rspec_metadata!
-end
-
 Unsplash.configure do |config|
   config.application_access_key = ENV['unsplash_access_key']
   config.application_secret = ENV['unsplash_secret_key']

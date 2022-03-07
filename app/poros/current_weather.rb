@@ -12,8 +12,8 @@ class CurrentWeather < Weather
     @datetime = format_datetime(data[:dt])
     @sunrise = format_datetime(data[:sunrise])
     @sunset = format_datetime(data[:sunset])
-    @temperature = data[:temperature]
-    @feels_like = data[:feels_like]
+    @temperature = "#{data[:temperature]} F"
+    @feels_like = "#{data[:feels_like]} F"
     @humidity = data[:humidity]
     @uvi = data[:uvi]
     @visibility = data[:visibility]
