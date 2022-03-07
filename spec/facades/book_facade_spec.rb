@@ -10,13 +10,13 @@ RSpec.describe 'book facade' do
         books = BookFacade.search(location, quantity)
 
         expect(books).to be_a(Books)
-        expect(books.total_books_found).to eq(quantity)
+        expect(books.total_books_found).to be_a(Integer)
         expect(books.books).to be_a(Array)
         book = books.books.sample(1)[0]
 
         expect(book).to be_a(Book)
-        expect(book.title).to be_a(String)
         expect(book.isbn).to be_a(Array)
+        expect(book.title).to be_a(String)
         expect(book.publisher).to be_a(Array)
       end
     end
