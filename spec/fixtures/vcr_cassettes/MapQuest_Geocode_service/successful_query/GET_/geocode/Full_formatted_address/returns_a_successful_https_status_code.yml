@@ -19,7 +19,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 07 Mar 2022 18:43:11 GMT
+      - Mon, 07 Mar 2022 19:00:46 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
@@ -35,13 +35,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Mon, 07 Mar 2022 18:43:11 GMT
+      - Mon, 07 Mar 2022 19:00:46 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=72059B639133FE25EE77600C5146E301; Path=/; HttpOnly
+      - JSESSIONID=E2641899176D39F3FCBA38335FBFF1D3; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -53,6 +53,6 @@ http_interactions:
         2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"1600
         Pennsylvania Ave NW,Washington,DC,20500"},"locations":[{"street":"1600 Pennsylvania
         Ave NW","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Washington","adminArea5Type":"City","adminArea4":"District
-        Of Columbia","adminArea4Type":"County","adminArea3":"DC","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"20500","geocodeQualityCode":"P1AAA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"N","linkId":"f9e72e2c-c9db-4445-a95a-50ed9836fc16","unknownInput":"","type":"s","latLng":{"lat":38.897683,"lng":-77.036629},"displayLatLng":{"lat":38.897683,"lng":-77.036629},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<encrypted_key>&type=map&size=225,160&locations=38.897683,-77.036629|marker-sm-50318A-1&scalebar=true&zoom=15&rand=-819432450"}]}]}'
-  recorded_at: Mon, 07 Mar 2022 18:43:11 GMT
+        Of Columbia","adminArea4Type":"County","adminArea3":"DC","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"20500","geocodeQualityCode":"P1AAA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"N","linkId":"f9e72e2c-c9db-4445-a95a-50ed9836fc16","unknownInput":"","type":"s","latLng":{"lat":38.897683,"lng":-77.036629},"displayLatLng":{"lat":38.897683,"lng":-77.036629},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<encrypted_key>&type=map&size=225,160&locations=38.897683,-77.036629|marker-sm-50318A-1&scalebar=true&zoom=15&rand=-163134919"}]}]}'
+  recorded_at: Mon, 07 Mar 2022 19:00:46 GMT
 recorded_with: VCR 6.0.0

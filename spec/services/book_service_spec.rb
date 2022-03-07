@@ -31,4 +31,19 @@ RSpec.describe 'book service' do
       end
     end
   end
+
+  context 'bad query' do
+    describe 'search(book, count)' do
+      let!(:location) { '' }
+      let!(:quantity) { "hasljh" }
+
+      it "returns an error respones and error message", :vcr do
+        response = BookService.search(location, quantity)
+
+        expect(response.status).to eq(200)
+        json = JSON.parse(response.body, symbolize_names: true)
+
+      end
+    end
+  end
 end

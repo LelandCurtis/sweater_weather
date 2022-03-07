@@ -20,5 +20,16 @@ RSpec.describe 'book facade' do
         expect(book.publisher).to be_a(Array)
       end
     end
+
+    context 'no results' do
+      let!(:location) { '' }
+      let!(:quantity) { 5 }
+
+      it "returns nil", :vcr do
+        books = BookFacade.search(location, quantity)
+
+        expect(books).to eq(nil)
+      end
+    end
   end
 end
