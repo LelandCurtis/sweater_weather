@@ -2,17 +2,17 @@ require 'rails_helper'
 
 RSpec.describe 'Open Weather Map Service' do
   context 'successful query' do
-    describe 'get forecast', :vcr do
+    describe 'get forecast' do
       let!(:lat) { 39.738453 }
       let!(:lon) { -104.984853 }
       let!(:response) { OpenWeatherMapService.get_forecast(lat, lon) }
       let!(:json) { JSON.parse(response.body, symbolize_names: true) }
 
-      it "returns a successful https status" do
+      it "returns a successful https status", :vcr do
         expect(response.status).to eq(200)
       end
 
-      it "returns the critical data in the data hash" do
+      it "returns the critical data in the data hash", :vcr do
         expect(json).to be_a(Hash)
         expect(json).to have_key(:daily)
         expect(json).to have_key(:hourly)

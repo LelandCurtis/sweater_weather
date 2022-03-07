@@ -4,16 +4,16 @@ RSpec.describe 'MapQuest Geocode service' do
   context 'successful query' do
     describe 'GET /geocode' do
 
-      describe 'Full formatted address', :vcr do
+      describe 'Full formatted address' do
         let!(:address_1) { "1600+Pennsylvania+Ave+NW,Washington,DC,20500" }
         let!(:response) { MapQuestService.get_geocode(address_1) }
         let!(:json) { JSON.parse(response.body, symbolize_names: true) }
 
-        it "returns a successful https status code" do
+        it "returns a successful https status code", :vcr do
           expect(response.status).to eq(200)
         end
 
-        it "returns expected json format" do
+        it "returns expected json format", :vcr do
           expect(json).to be_a(Hash)
           expect(json.keys).to eq([:info, :options, :results])
           expect(json[:results]).to be_a(Array)
@@ -30,16 +30,16 @@ RSpec.describe 'MapQuest Geocode service' do
         end
       end
 
-      describe 'Full unformatted address', :vcr do
+      describe 'Full unformatted address'do
         let!(:address_2) { "1850 Bassett Street Apt 813, Denver, CO, 80202" }
         let!(:response) { MapQuestService.get_geocode(address_2) }
         let!(:json) { JSON.parse(response.body, symbolize_names: true) }
 
-        it "returns a successful https status code" do
+        it "returns a successful https status code", :vcr do
           expect(response.status).to eq(200)
         end
 
-        it "returns expected json format" do
+        it "returns expected json format", :vcr do
           expect(json).to be_a(Hash)
           expect(json.keys).to eq([:info, :options, :results])
           expect(json[:results]).to be_a(Array)
@@ -56,16 +56,16 @@ RSpec.describe 'MapQuest Geocode service' do
         end
       end
 
-      describe 'City, state, zipcode address', :vcr do
+      describe 'City, state, zipcode address' do
         let!(:address_3) { "Denver, CO, 80202" }
         let!(:response) { MapQuestService.get_geocode(address_3) }
         let!(:json) { JSON.parse(response.body, symbolize_names: true) }
 
-        it "returns a successful https status code" do
+        it "returns a successful https status code", :vcr do
           expect(response.status).to eq(200)
         end
 
-        it "returns expected json format" do
+        it "returns expected json format", :vcr do
           expect(json).to be_a(Hash)
           expect(json.keys).to eq([:info, :options, :results])
           expect(json[:results]).to be_a(Array)
@@ -82,16 +82,16 @@ RSpec.describe 'MapQuest Geocode service' do
         end
       end
 
-      describe 'City, state address', :vcr do
+      describe 'City, state address' do
         let!(:address_4) { "Denver, CO" }
         let!(:response) { MapQuestService.get_geocode(address_4) }
         let!(:json) { JSON.parse(response.body, symbolize_names: true) }
 
-        it "returns a successful https status code" do
+        it "returns a successful https status code", :vcr do
           expect(response.status).to eq(200)
         end
 
-        it "returns expected json format" do
+        it "returns expected json format", :vcr do
           expect(json).to be_a(Hash)
           expect(json.keys).to eq([:info, :options, :results])
           expect(json[:results]).to be_a(Array)
@@ -108,16 +108,16 @@ RSpec.describe 'MapQuest Geocode service' do
         end
       end
 
-      describe 'City address', :vcr do
+      describe 'City address' do
         let!(:address_5) { "Denver" }
         let!(:response) { MapQuestService.get_geocode(address_5) }
         let!(:json) { JSON.parse(response.body, symbolize_names: true) }
 
-        it "returns a successful https status code" do
+        it "returns a successful https status code", :vcr do
           expect(response.status).to eq(200)
         end
 
-        it "returns expected json format" do
+        it "returns expected json format", :vcr do
           expect(json).to be_a(Hash)
           expect(json.keys).to eq([:info, :options, :results])
           expect(json[:results]).to be_a(Array)
