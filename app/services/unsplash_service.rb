@@ -6,7 +6,6 @@ class UnsplashService
     end
 
     def search(query)
-      require "pry"; binding.pry
       get_url("/search/photos?query=#{query}&client_id=#{ENV['unsplash_access_key']}")
     end
 
