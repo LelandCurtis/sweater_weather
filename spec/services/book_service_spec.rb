@@ -5,7 +5,6 @@ RSpec.describe 'book service' do
     describe 'search(book, count)' do
       let!(:location) { 'denver,co' }
       let!(:quantity) { 5 }
-      let!(:query) { "location" }
 
       it "returns a hash with the book search and needed data", :vcr do
         response = BookService.search(location, quantity)
