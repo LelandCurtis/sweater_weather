@@ -2,16 +2,16 @@ require 'rails_helper'
 
 RSpec.describe 'Open Weather Map Facade' do
   context 'successful query' do
-    describe 'get_forecast' do
+    describe 'get_forecast', :vcr do
       let!(:lat) { 39.738453 }
       let!(:lon) { -104.984853 }
 
-      it "returns a forecast object", :vcr do
+      it "returns a forecast object"do
         forecast = OpenWeatherMapFacade.get_forecast(lat, lon)
         expect(forecast).to be_a(Forecast)
       end
 
-      it "returns a forecast object with the correct current weather object and data", :vcr do
+      it "returns a forecast object with the correct current weather object and data" do
         forecast = OpenWeatherMapFacade.get_forecast(lat, lon)
         current = forecast.current
         expect(current).to be_a(CurrentWeather)
@@ -27,7 +27,7 @@ RSpec.describe 'Open Weather Map Facade' do
         expect(current.icon).to be_a(String)
       end
 
-      it "returns a forecast object with the correct daily weather array, objects and data", :vcr do
+      it "returns a forecast object with the correct daily weather array, objects and data" do
         forecast = OpenWeatherMapFacade.get_forecast(lat, lon)
         daily_array = forecast.daily
         expect(daily_array).to be_a(Array)
@@ -43,7 +43,7 @@ RSpec.describe 'Open Weather Map Facade' do
         expect(daily.icon).to be_a(String)
       end
 
-      it "returns a forecast object with the correct hourly weather array, objects and data", :vcr do
+      it "returns a forecast object with the correct hourly weather array, objects and data" do
         forecast = OpenWeatherMapFacade.get_forecast(lat, lon)
         hourly_array = forecast.hourly
         expect(hourly_array).to be_a(Array)

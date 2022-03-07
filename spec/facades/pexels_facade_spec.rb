@@ -8,7 +8,6 @@ RSpec.describe 'Pexels Facade' do
 
       it "returns a hash with lat and lng keys and coordinates", :vcr do
         expect(image).to be_a(Image)
-
       end
     end
   end
