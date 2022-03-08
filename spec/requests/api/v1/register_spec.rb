@@ -86,5 +86,28 @@ RSpec.describe 'POST /api/v1/users' do
         expect(data[:message]).to eq("Password confirmation doesn't match Password")
       end
     end
+
+    describe 'try to register a new user without password confirmation', :vcr do
+      let!(:request_data) { {"email": "whatever@example.com",
+                            "password": "password"}
+                          }
+      let!(:request) { post '/api/v1/users', params: request_data.to_json }
+      let!(:json) { JSON.parse(response.body, symbolize_names: true) }
+
+      it "returns the expected status code" do
+        request
+        expect(response.status).to eq(400)
+      end
+
+      it "returns expected data hash" do
+        request
+        expect(json).to be_a(Hash)
+        expect(json).to have_key(:data)
+        data = json[:data]
+        expect(data).to be_a(Hash)
+        expect(data).to have_key(:message)
+        expect(data[:message]).to eq("Password confirmation can't be blank")
+      end
+    end
   end
 end

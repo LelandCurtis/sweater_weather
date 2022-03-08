@@ -4,7 +4,7 @@ Rails.application.routes.draw do
       get '/forecast', to: 'forecast#search'
       get '/backgrounds', to: 'image#search'
       post '/users', to: 'users#register'
-      post '/sessions', to: 'users#register'
+      post '/sessions', to: 'users#login'
     end
   end
 end

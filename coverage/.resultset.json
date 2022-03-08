@@ -256,23 +256,32 @@
           1,
           null,
           1,
-          6,
-          6,
-          6,
+          8,
+          8,
+          8,
           null,
-          6,
+          8,
           2,
           null,
-          4,
+          6,
           null,
           null,
           null,
           1,
           0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
           null,
           null,
           1,
           null,
+          1,
+          8,
           null,
           null,
           null
@@ -289,13 +298,14 @@
         "lines": [
           1,
           1,
-          6,
+          8,
           null,
           null
         ]
       },
       "/Users/lelandcurtis/turing/3mod/sweater_weather/app/models/user.rb": {
         "lines": [
+          1,
           1,
           1,
           1,
@@ -320,6 +330,6 @@
         ]
       }
     },
-    "timestamp": 1646763964
+    "timestamp": 1646765496
   }
 }
