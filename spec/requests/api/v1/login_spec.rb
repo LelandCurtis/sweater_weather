@@ -1,10 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe 'POST /api/v1/users' do
+RSpec.describe 'POST /api/v1/sessions' do
 
   context 'good credentials' do
     describe 'login a user', :vcr do
-      let!(:user) { create(:user, email: "whatever@example.com", password: "password" ) }
       let!(:request_data) { {"email": "whatever@example.com",
                             "password": "password"}
                           }
@@ -35,6 +34,5 @@ RSpec.describe 'POST /api/v1/users' do
         expect(attr[:api_key]).to be_a(String)
       end
     end
-
   end
 end
