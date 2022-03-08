@@ -3,12 +3,12 @@ require 'rails_helper'
 RSpec.describe 'POST /api/v1/users' do
 
   context 'good credentials' do
-    describe 'login a user', :vcr do
-      let!(:user) { create(:user, email: "whatever@example.com", password: "password" ) }
+    describe 'register a new user', :vcr do
       let!(:request_data) { {"email": "whatever@example.com",
-                            "password": "password"}
+                            "password": "password",
+                            "password_confirmation": "password"}
                           }
-      let!(:request) { post '/api/v1/sessions', params: request_data.to_json }
+      let!(:request) { post '/api/v1/users', params: request_data.to_json }
       let!(:json) { JSON.parse(response.body, symbolize_names: true) }
 
       it "returns the expected status code" do
