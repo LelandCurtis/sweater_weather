@@ -15,8 +15,7 @@ class Api::V1::UsersController < ApplicationController
   def login
     json = request_json
     user = User.find_by(email: json[:email])
-    require "pry"; binding.pry
-    if user.id && user.authenticate(password: json[:password])
+    if user && user.authenticate(json[:password])
       json_response(UsersSerializer.new(user), :ok)
     else
       json_response({data: {message: "Invalid credentials"}}, :unauthorized)
