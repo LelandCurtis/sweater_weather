@@ -85,3 +85,10 @@ Unsplash.configure do |config|
   config.application_redirect_uri = "https://your-application.com/oauth/callback"
   config.utm_source = "Sweater_Weather"
 end
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end

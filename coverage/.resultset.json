@@ -195,7 +195,7 @@
           null,
           null,
           1,
-          2,
+          1,
           null,
           null,
           null,
@@ -225,6 +225,16 @@
           null
         ]
       },
+      "/Users/lelandcurtis/turing/3mod/sweater_weather/spec/factories/users.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/lelandcurtis/turing/3mod/sweater_weather/config/routes.rb": {
         "lines": [
           1,
@@ -238,37 +248,24 @@
           null
         ]
       },
-      "/Users/lelandcurtis/turing/3mod/sweater_weather/app/controllers/api/v1/users_controller.rb": {
+      "/Users/lelandcurtis/turing/3mod/sweater_weather/app/models/user.rb": {
         "lines": [
           1,
-          null,
           1,
           1,
-          0,
           null,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/lelandcurtis/turing/3mod/sweater_weather/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
           1,
           null
         ]
       },
-      "/Users/lelandcurtis/turing/3mod/sweater_weather/app/controllers/concerns/response.rb": {
+      "/Users/lelandcurtis/turing/3mod/sweater_weather/app/models/application_record.rb": {
         "lines": [
           1,
           1,
-          0,
-          null,
           null
         ]
       }
     },
-    "timestamp": 1646697004
+    "timestamp": 1646760647
   }
 }
