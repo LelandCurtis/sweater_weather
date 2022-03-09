@@ -19,11 +19,11 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Wed, 09 Mar 2022 02:50:30 GMT
+      - Wed, 09 Mar 2022 19:50:04 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '7487'
+      - '1733'
       Access-Control-Allow-Methods:
       - OPTIONS,GET,POST
       Access-Control-Allow-Origin:
@@ -35,13 +35,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Wed, 09 Mar 2022 02:50:30 GMT
+      - Wed, 09 Mar 2022 19:50:04 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=49F93C6B61E1032954F379AD00FC69AE; Path=/; HttpOnly
+      - JSESSIONID=D88FA48571742F1DC3DE3D5026BE639D; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -50,18 +50,8 @@ http_interactions:
       encoding: UTF-8
       string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2022 MapQuest,
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
-        2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"Denver,CO"},"locations":[{"street":"Denver
-        Lane","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Louisville-Jefferson
-        County","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"KY","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"40258","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p2/2735036","unknownInput":"","type":"s","latLng":{"lat":38.17368,"lng":-85.8849},"displayLatLng":{"lat":38.17368,"lng":-85.8849},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<encrypted_map_quest_key>&type=map&size=225,160&locations=38.17368,-85.8849|marker-sm-50318A-1&scalebar=true&zoom=15&rand=-2078393578"},{"street":"Denver
-        Avenue","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Fort
-        Lupton","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"80621","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p0/1728017","unknownInput":"","type":"s","latLng":{"lat":40.09107,"lng":-104.81054},"displayLatLng":{"lat":40.09107,"lng":-104.81054},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<encrypted_map_quest_key>&type=map&size=225,160&locations=40.09107,-104.81054|marker-sm-50318A-2&scalebar=true&zoom=15&rand=-213858144"},{"street":"Denver
-        Road","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Aiken","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"SC","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"29803","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p1/2046548","unknownInput":"","type":"s","latLng":{"lat":33.38343,"lng":-81.78777},"displayLatLng":{"lat":33.38343,"lng":-81.78777},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<encrypted_map_quest_key>&type=map&size=225,160&locations=33.38343,-81.78777|marker-sm-50318A-3&scalebar=true&zoom=15&rand=620720902"},{"street":"Denver
-        Road","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Osage","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"MO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"65536","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p2/1045926","unknownInput":"","type":"s","latLng":{"lat":37.59515,"lng":-92.50841},"displayLatLng":{"lat":37.59515,"lng":-92.50841},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<encrypted_map_quest_key>&type=map&size=225,160&locations=37.59515,-92.50841|marker-sm-50318A-4&scalebar=true&zoom=15&rand=-1317141086"},{"street":"Denver
-        Avenue","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Saguache","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"81149","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p2/2441813","unknownInput":"","type":"s","latLng":{"lat":38.08765,"lng":-106.14222},"displayLatLng":{"lat":38.08765,"lng":-106.14222},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<encrypted_map_quest_key>&type=map&size=225,160&locations=38.08765,-106.14222|marker-sm-50318A-5&scalebar=true&zoom=15&rand=934507784"},{"street":"Denver
-        Boulevard","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Blanca","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"81123","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p3/2280349","unknownInput":"","type":"s","latLng":{"lat":37.41926,"lng":-105.64675},"displayLatLng":{"lat":37.41926,"lng":-105.64675},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<encrypted_map_quest_key>&type=map&size=225,160&locations=37.41926,-105.64675|marker-sm-50318A-6&scalebar=true&zoom=15&rand=-585291235"},{"street":"South
-        Denver Avenue","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Fort
-        Lupton","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"80621","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p1/1314904","unknownInput":"","type":"s","latLng":{"lat":40.07297,"lng":-104.81049},"displayLatLng":{"lat":40.07297,"lng":-104.81049},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<encrypted_map_quest_key>&type=map&size=225,160&locations=40.07297,-104.81049|marker-sm-50318A-7&scalebar=true&zoom=15&rand=732926884"},{"street":"Denver
-        West County Mills Boulevard","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p1/1290427","unknownInput":"","type":"s","latLng":{"lat":39.72904,"lng":-105.16536},"displayLatLng":{"lat":39.72904,"lng":-105.16536},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<encrypted_map_quest_key>&type=map&size=225,160&locations=39.72904,-105.16536|marker-sm-50318A-8&scalebar=true&zoom=15&rand=1138886924"},{"street":"Denver
-        Street","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Morgan","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"MO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"64673","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p1/485866","unknownInput":"","type":"s","latLng":{"lat":40.4605,"lng":-93.62931},"displayLatLng":{"lat":40.4605,"lng":-93.62931},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<encrypted_map_quest_key>&type=map&size=225,160&locations=40.4605,-93.62931|marker-sm-50318A-9&scalebar=true&zoom=15&rand=-949063331"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"US/GEO/p0/68626","unknownInput":"","type":"s","latLng":{"lat":39.73845,"lng":-104.98485},"displayLatLng":{"lat":39.73845,"lng":-104.98485},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<encrypted_map_quest_key>&type=map&size=225,160&locations=39.73845,-104.98485|marker-sm-50318A-10&scalebar=true&zoom=12&rand=581280360"}]}]}'
-  recorded_at: Wed, 09 Mar 2022 02:50:30 GMT
+        2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"Denver,CO"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"Denver
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<encrypted_map_quest_key>&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-1&scalebar=true&zoom=12&rand=1109270994"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<encrypted_map_quest_key>&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-2&scalebar=true&zoom=9&rand=952978072"}]}]}'
+  recorded_at: Wed, 09 Mar 2022 19:50:03 GMT
 recorded_with: VCR 6.0.0

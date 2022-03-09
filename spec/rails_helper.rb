@@ -79,13 +79,6 @@ VCR.configure do |config|
   config.configure_rspec_metadata!
 end
 
-Unsplash.configure do |config|
-  config.application_access_key = ENV['unsplash_access_key']
-  config.application_secret = ENV['unsplash_secret_key']
-  config.application_redirect_uri = "https://your-application.com/oauth/callback"
-  config.utm_source = "Sweater_Weather"
-end
-
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec
