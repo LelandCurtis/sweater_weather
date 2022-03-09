@@ -34,7 +34,7 @@ class MapQuestFacade
       data_hash[:start_city] = "#{origin[:adminArea5]}, #{origin[:adminArea3]}"
       data_hash[:end_city] = "#{destination[:adminArea5]}, #{destination[:adminArea3]}"
 
-      data_hash[:travel_time] = route_data[:route][:realTime]
+      data_hash[:travel_time] = route_data[:route][:formattedTime]
 
       eta_weather = get_eta_weather(route_data)
 

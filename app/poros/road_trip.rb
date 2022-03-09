@@ -9,8 +9,8 @@ class RoadTrip
     @conditions = data[:conditions]
   end
 
-  def format_trip_time(seconds_since_epoch)
-    time = Time.at(seconds_since_epoch).to_datetime
-    "#{time.hour} hours, #{time.minute} minutes"
+  def format_trip_time(formatted_time)
+    time = formatted_time.split(':')
+    "#{time[0]} hours, #{time[1]} minutes"
   end
 end
