@@ -10,7 +10,11 @@ class MapQuestFacade
     def get_road_trip(from, to)
       response = MapQuestService.get_route(from, to)
       route_data = JSON.parse(response.body, symbolize_names: true)
-      road_trip = RoadTrip.new(collect_roadtrip_data(route_data))
+      if route_data[:route][:routeError][:errorCode] != -400
+        road_trip = RoadTrip.new(roadtrip_error_data(from, to))
+      else
+        road_trip = RoadTrip.new(collect_roadtrip_data(route_data))
+      end
     end
 
     def get_arrival_hour(route_data)
@@ -38,8 +42,16 @@ class MapQuestFacade
 
       eta_weather = get_eta_weather(route_data)
 
-      data_hash[:temperature] = eta_weather.temperature
-      data_hash[:conditions] = eta_weather.conditions
+      data_hash[:weather] = {temperature: eta_weather.temperature, conditions: eta_weather.conditions}
+      data_hash
+    end
+
+    def roadtrip_error_data(from, to)
+      data_hash = {}
+      data_hash[:start_city] = from
+      data_hash[:end_city] = to
+      data_hash[:travel_time] = "impossible route"
+      data_hash[:weather] = nil
       data_hash
     end
 

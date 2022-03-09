@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'road trip poro' do
   let!(:attributes) { {start_city: 'New York, NY',
                       end_city: 'Los Angeles, CA',
-                      travel_time: 7980,
+                      travel_time: "19:13:29",
                       temperature: 84.4,
                       conditions: "cloudy and such"
                     } }
