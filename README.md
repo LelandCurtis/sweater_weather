@@ -1,15 +1,4 @@
-# Sweater Weather
-
-# MarketMap: A Turing 2110 BE Mod 3 Consultancy Project
-
-![languages](https://img.shields.io/github/languages/top/Turing-MarketMap/market-map-fe?color=red)
-![PRs](https://img.shields.io/github/issues-pr-closed/Turing-MarketMap/market-map-fe)
-![rspec](https://img.shields.io/gem/v/rspec?color=blue&label=rspec)
-![simplecov](https://img.shields.io/gem/v/simplecov?color=blue&label=simplecov) <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/contributors-6-orange.svg?style=flat)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
-
+# Sweater Weather: A Turing 2110 BE Mod 3 Project
 
 ## Background & Description:
 "Sweater Weather" is an individual project that focusses on consuming and creating API endpoints. It combines freely-available weather, location, image, and travel-directions data to serve up information about the weather at queried destinations.
