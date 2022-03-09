@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'MapQuest Geocode service' do
+RSpec.describe 'MapQuest services' do
   describe 'GET /geocode' do
     context 'successful query' do
 

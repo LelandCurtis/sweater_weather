@@ -1,12 +1,12 @@
 class OpenWeatherMapFacade
   class << self
 
-    def get_forecast(lat, lon)
+    def get_forecast(lat, lon, hour_count = 8)
       response = OpenWeatherMapService.get_forecast(lat, lon)
       json = JSON.parse(response.body, symbolize_names: true)
 
       current_weather = CurrentWeather.new(clean_current_weather_data(json[:current]))
-      hourly_weather = json[:hourly][0..7].map do |hour|
+      hourly_weather = json[:hourly][0..(hour_count - 1)].map do |hour|
         HourlyWeather.new(clean_hourly_weather_data(hour))
       end
       daily_weather = json[:daily][0..4].map do |day|

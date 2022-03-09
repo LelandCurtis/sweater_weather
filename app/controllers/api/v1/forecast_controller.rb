@@ -1,10 +1,7 @@
 class Api::V1::ForecastController < ApplicationController
 
   def search
-    latLon = MapQuestFacade.get_geocode("#{params[:city]}, #{params[:state]}")
-    lat = latLon[:lat]
-    lon = latLon[:lng]
-    forecast = OpenWeatherMapFacade.get_forecast(lat, lon)
+    forecast = ForecastFacade.get_forecast("#{params[:location]}")
     json_response(ForecastSerializer.forecast(forecast), :ok)
   end
 

@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Wed, 09 Mar 2022 01:06:18 GMT
+      - Wed, 09 Mar 2022 01:06:11 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -38,7 +38,7 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: '{"lat":39.7385,"lon":-104.9849,"timezone":"America/Denver","timezone_offset":-25200,"current":{"dt":1646787972,"sunrise":1646745748,"sunset":1646787550,"temp":33.4,"feels_like":27.91,"pressure":1013,"humidity":36,"dew_point":11.79,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":5.99,"wind_deg":349,"weather":[{"id":800,"main":"Clear","description":"clear
+      string: '{"lat":39.7385,"lon":-104.9849,"timezone":"America/Denver","timezone_offset":-25200,"current":{"dt":1646787971,"sunrise":1646745748,"sunset":1646787550,"temp":33.4,"feels_like":27.91,"pressure":1013,"humidity":36,"dew_point":11.79,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":5.99,"wind_deg":349,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01n"}]},"hourly":[{"dt":1646787600,"temp":33.4,"feels_like":29.48,"pressure":1013,"humidity":36,"dew_point":11.79,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":4.21,"wind_deg":160,"wind_gust":4.14,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01n"}],"pop":0},{"dt":1646791200,"temp":32.76,"feels_like":27.68,"pressure":1013,"humidity":39,"dew_point":12.87,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":5.32,"wind_deg":172,"wind_gust":10.04,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01n"}],"pop":0},{"dt":1646794800,"temp":31.82,"feels_like":27.39,"pressure":1014,"humidity":42,"dew_point":13.59,"uvi":0,"clouds":2,"visibility":10000,"wind_speed":4.45,"wind_deg":183,"wind_gust":6.67,"weather":[{"id":800,"main":"Clear","description":"clear
@@ -93,5 +93,5 @@ http_interactions:
         sky","icon":"01d"}],"clouds":7,"pop":0,"uvi":5.11},{"dt":1647198000,"sunrise":1647177273,"sunset":1647219862,"moonrise":1647202800,"moonset":1647172920,"moon_phase":0.35,"temp":{"day":51.33,"min":34.86,"max":56.75,"night":37.98,"eve":45.46,"morn":34.86},"feels_like":{"day":47.62,"night":31.33,"eve":38.03,"morn":29.84},"pressure":1003,"humidity":31,"dew_point":21.38,"wind_speed":18.3,"wind_deg":73,"wind_gust":24.63,"weather":[{"id":616,"main":"Snow","description":"rain
         and snow","icon":"13d"}],"clouds":83,"pop":1,"rain":0.25,"snow":1.24,"uvi":6},{"dt":1647284400,"sunrise":1647263577,"sunset":1647306323,"moonrise":1647292980,"moonset":1647258120,"moon_phase":0.38,"temp":{"day":40.44,"min":31.26,"max":48.97,"night":41.65,"eve":48.97,"morn":31.26},"feels_like":{"day":36.1,"night":39.81,"eve":48.97,"morn":31.26},"pressure":1024,"humidity":46,"dew_point":21.22,"wind_speed":6.29,"wind_deg":170,"wind_gust":9.13,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":6,"pop":1,"snow":4.51,"uvi":6},{"dt":1647370800,"sunrise":1647349881,"sunset":1647392784,"moonrise":1647383280,"moonset":1647346500,"moon_phase":0.41,"temp":{"day":51.51,"min":37.15,"max":58.6,"night":50.54,"eve":57.92,"morn":37.15},"feels_like":{"day":47.62,"night":46.71,"eve":54.27,"morn":34.16},"pressure":1013,"humidity":27,"dew_point":18.28,"wind_speed":5.46,"wind_deg":209,"wind_gust":7.38,"weather":[{"id":804,"main":"Clouds","description":"overcast
         clouds","icon":"04d"}],"clouds":100,"pop":0,"uvi":6}]}'
-  recorded_at: Wed, 09 Mar 2022 01:06:18 GMT
+  recorded_at: Wed, 09 Mar 2022 01:06:11 GMT
 recorded_with: VCR 6.0.0
