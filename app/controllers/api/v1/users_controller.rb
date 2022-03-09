@@ -24,8 +24,8 @@ class Api::V1::UsersController < ApplicationController
 
   private
 
-    def request_json
-      JSON.parse(request.body.string, symbolize_names: true)
-    end
+  def request_json
+    JSON.parse(request.body.string, symbolize_names: true)
+  end
 
 end
