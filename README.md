@@ -12,16 +12,12 @@
 
 
 ## Background & Description:
-"MarketMap" is a group project built over the course of 10 days in Turing's module 3 backend program. This project is a branch of Turing's Consultancy project. We pitched a rough concept of creating an application that would let a user search for cars listings and enable them to know if they were getting a good deal based other listings across the United States. See below for more details on the backend features.
+"Sweater Weather" is an individual project that focusses on consuming and creating API endpoints. It combines freely-available weather, location, image, and travel-directions data to serve up information about the weather at queried destinations.
 
 ## Features:
-- Consuption of Google Image API to find images for the listings
-- Consume the endpoints exposed by the MarketMap backend
-- Integrate a chart with user/friendly features
-- Implement Circle CI
-- Implement OAuth using OmniAuth to sign in with Google
-- Build a project with Service Oriented Architecture (SOA)
-
+- Consume several external APIs
+- Repackage data into new API endpoints
+- Allow user registration and login
 
 ## Requirements and Setup (for Mac):
 ### Ruby and Rails
@@ -62,7 +58,6 @@
     open_weather_api_key: <your api key here>
     map_quest_api_key: <your api key here>
     pexels_api_key: <your api key here>
-
    ```
 9. Startup and Access require the server to be running locally and a web browser opened.
   - Start Server
@@ -80,7 +75,131 @@ $ rails s
    or test the whole suite with `$ rspec`
 
 
-## External API Endpoint
+## API Endpoints
+#### Retrieve weather for a city: `GET /api/v1/forecast?location=denver,co`
+#### Example Response:
+```
+{
+  "data": {
+    "id": null,
+    "type": "forecast",
+    "attributes": {
+      "current_weather": {
+        "datetime": "2020-09-30 13:27:03 -0600",
+        "temperature": 79.4,
+        etc
+      },
+      "daily_weather": [
+        {
+          "date": "2020-10-01",
+          "sunrise": "2020-10-01 06:10:43 -0600",
+          etc
+        },
+        {...} etc
+      ],
+      "hourly_weather": [
+        {
+          "time": "14:00:00",
+          "conditions": "cloudy with a chance of meatballs",
+          etc
+        },
+        {...} etc
+      ]
+    }
+  }
+}
+```
+
+#### Retrieve Background Image for the City: `GET /api/v1/backgrounds?location=denver,co`
+#### Example Response:
+```
+{
+    "data": {
+        "id": null,
+        "type": "image",
+        "attributes": {
+            "image": {
+                "height": 4160,
+                "width": 6240,
+                "location": "Denver",
+                "image_url": "https://www.pexels.com/photo/union-station-building-2706750/",
+                "author": "Thomas Ward"
+            }
+        }
+    }
+}
+```
+
+#### User Registration: `POST /api/v1/users`
+```
+{
+  "email": "whatever@example.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+```
+
+#### Example Response:
+```
+{
+  "data": {
+    "type": "users",
+    "id": "1",
+    "attributes": {
+      "email": "whatever@example.com",
+      "api_key": "jgn983hy48thw9begh98h4539h4"
+    }
+  }
+}
+```
+
+#### User Login: `POST /api/v1/sessions`
+```
+{
+  "email": "whatever@example.com",
+  "password": "password"
+}
+```
+#### Example Response:
+```
+{
+  "data": {
+    "type": "users",
+    "id": "1",
+    "attributes": {
+      "email": "whatever@example.com",
+      "api_key": "jgn983hy48thw9begh98h4539h4"
+    }
+  }
+}
+```
+
+#### Retrieve Weather at Roadtrip Destination: `POST /api/v1/road_trip`
+```
+{
+  "origin": "Denver,CO",
+  "destination": "Pueblo,CO",
+  "api_key": "jgn983hy48thw9begh98h4539h4"
+}
+```
+#### Example Response:
+```
+{
+   "data": {
+      "id": null,
+      "type": "roadtrip",
+      "attributes": {
+         "start_city": "Denver, CO",
+         "end_city": "Port Matilda, PA",
+         "travel_time": "22 hours, 39 minutes",
+         "weather_at_eta": {
+            "temperature": 35.85,
+            "conditions": "overcast clouds"
+         }        
+      }
+   }
+}
+```
 
 
 ## Further Project Information
