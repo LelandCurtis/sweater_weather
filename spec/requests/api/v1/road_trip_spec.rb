@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe 'GET /api/v1/road_trip' do
   context 'good request' do
     describe 'GET route', :vcr do
-      let!(:from) { 'New York, NY' }
-      let!(:to) { 'Los Angeles, CA' }
-      let!(:request_data) { {from: from, to: to} }
+      let!(:origin) { 'New York, NY' }
+      let!(:destination) { 'Los Angeles, CA' }
+      let!(:request_data) { {origin: origin, destination: destination} }
       let!(:request) { get "/api/v1/road_trip", params: request_data.to_json }
       let!(:json) { JSON.parse(response.body, symbolize_names: true) }
 

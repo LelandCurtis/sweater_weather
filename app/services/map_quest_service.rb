@@ -9,6 +9,10 @@ class MapQuestService
       get_url("/geocoding/v1/address?location=#{formatted_address(address)}")
     end
 
+    def get_route(from, to)
+      get_url("/directions/v2/route?from=#{from}&to=#{to}")
+    end
+
     def get_url(url)
       response = conn.get(url + "&key=#{ENV['map_quest_api_key']}")
     end
