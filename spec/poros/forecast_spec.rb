@@ -32,9 +32,9 @@ RSpec.describe 'Forecast object' do
   it "returns a forecast object with the correct current weather object and data" do
     current_weather = forecast.current
     expect(current_weather).to be_a(CurrentWeather)
-    expect(current_weather.datetime).to eq('2022-03-06 17:27:13 -07:00')
-    expect(current_weather.sunrise).to eq('2022-03-06 06:25:35 -07:00')
-    expect(current_weather.sunset).to eq('2022-03-06 17:57:04 -07:00')
+    expect(current_weather.datetime.to_datetime.utc).to eq('2022-03-06 17:27:13 -07:00')
+    expect(current_weather.sunrise.to_datetime.utc).to eq('2022-03-06 06:25:35 -07:00')
+    expect(current_weather.sunset.to_datetime.utc).to eq('2022-03-06 17:57:04 -07:00')
     expect(current_weather.temperature).to eq(85.6)
     expect(current_weather.feels_like).to eq(95.6)
     expect(current_weather.humidity).to eq(84)
