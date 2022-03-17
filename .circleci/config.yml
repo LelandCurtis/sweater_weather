@@ -68,7 +68,8 @@ jobs:
       - ruby/rspec-test
 
       # store test results
-      - store_test_results
+      - store_test_results:
+        path: test-results
 
 # We use workflows to orchestrate the jobs that we declared above.
 workflows:
