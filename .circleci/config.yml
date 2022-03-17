@@ -63,10 +63,14 @@ jobs:
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
       - run:
           name: Database setup
-          command: bundle exec rails db:schema:load --trace
+          command:
+            bundle exec rake db:create
+            bundle exec rake db:migrate
 
       # Run rspec in parallel
-      - ruby/rspec-test
+      - ruby/rspec-test:
+        label: RSpec Tests
+        include: spec/**/*_spec.rb
 
 # We use workflows to orchestrate the jobs that we declared above.
 workflows:
