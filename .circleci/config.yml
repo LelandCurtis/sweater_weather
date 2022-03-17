@@ -68,9 +68,7 @@ jobs:
             bundle exec rake db:migrate
 
       # Run rspec in parallel
-      - ruby/rspec-test:
-        label: RSpec Tests
-        include: spec/**/*_spec.rb
+      - ruby/rspec-test
 
 # We use workflows to orchestrate the jobs that we declared above.
 workflows:
