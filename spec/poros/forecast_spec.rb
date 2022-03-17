@@ -50,9 +50,9 @@ RSpec.describe 'Forecast object' do
     expect(daily_array.count).to eq(5)
     daily_weather = daily_array.sample(1)[0]
     expect(daily_weather).to be_a(DailyWeather)
-    expect(daily_weather.date).to eq('2022-03-06')
-    expect(daily_weather.sunrise).to eq('2022-03-06 06:25:35 -07:00')
-    expect(daily_weather.sunset).to eq('2022-03-06 17:57:04 -07:00')
+    expect(daily_weather.date.to_datetime.utc.in_time_zone("MST")).to eq('2022-03-06')
+    expect(daily_weather.sunrise.to_datetime.utc).to eq('2022-03-06 06:25:35 -07:00')
+    expect(daily_weather.sunset.to_datetime.utc).to eq('2022-03-06 17:57:04 -07:00')
     expect(daily_weather.max_temp).to eq(85.6)
     expect(daily_weather.min_temp).to eq(45.6)
     expect(daily_weather.conditions).to eq("overcast clouds")
@@ -65,7 +65,7 @@ RSpec.describe 'Forecast object' do
     expect(hourly_array.count).to eq(8)
     hourly_weather = hourly_array.sample(1)[0]
     expect(hourly_weather).to be_a(HourlyWeather)
-    expect(hourly_weather.time).to eq('17:27:13')
+    expect(hourly_weather.time.to_datetime.utc).to eq('17:27:13')
     expect(hourly_weather.temperature).to eq(85.6)
     expect(hourly_weather.conditions).to eq("overcast clouds")
     expect(hourly_weather.icon).to eq("04d")
