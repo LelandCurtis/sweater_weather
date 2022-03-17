@@ -16,9 +16,9 @@ RSpec.describe 'DailyWeather object' do
   end
 
   it "has correct attributes" do
-    expect(daily_weather.date).to eq('2022-03-06')
-    expect(daily_weather.sunrise).to eq('2022-03-06 06:25:35 -07:00')
-    expect(daily_weather.sunset).to eq('2022-03-06 17:57:04 -07:00')
+    expect(daily_weather.date.to_datetime.utc.in_time_zone("MST")).to eq('2022-03-06')
+    expect(daily_weather.sunrise.to_datetime.utc).to eq('2022-03-06 06:25:35 -07:00')
+    expect(daily_weather.sunset.to_datetime.utc).to eq('2022-03-06 17:57:04 -07:00')
     expect(daily_weather.max_temp).to eq(85.6)
     expect(daily_weather.min_temp).to eq(45.6)
     expect(daily_weather.conditions).to eq("overcast clouds")
